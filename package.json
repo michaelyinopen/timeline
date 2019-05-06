@@ -1,5 +1,5 @@
 {
-  "name": "@michaelyin/timeline",
+  "name": "@michaelyinopen/timeline",
   "version": "1.0.0",
   "description": "A React component that shows some events' time and duration on a time scale",
   "private": true,

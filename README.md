@@ -1,10 +1,10 @@
-# @michaelyin/timeline
+# @michaelyinopen/timeline
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-Describe @michaelyin/timeline here.
+A React component that shows some events' time and duration on a time scale.
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo
