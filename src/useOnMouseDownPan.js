@@ -32,7 +32,7 @@ const calculateNewViewInterval = (
   return [newViewStart, newViewEnd];
 };
 
-const useOnMouseDownPanViewInterval = containerRef => {
+const useOnMouseDownPan = containerRef => {
   const dispatch = useContext(TimeLineDispatchContext);
   const width = useScheduleWidth();
   const viewStartTime = useViewStartTime();
@@ -113,4 +113,4 @@ const useOnMouseDownPanViewInterval = containerRef => {
   return onMouseDown;
 };
 
-export default useOnMouseDownPanViewInterval;
+export default useOnMouseDownPan;

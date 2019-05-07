@@ -17,8 +17,8 @@ import {
 } from './store/tickMark';
 import { majorTickMarkHeight, minorTickMarkHeight } from './constants';
 
-import useOnMouseDownPanViewInterval from './useOnMouseDownPanViewInterval';
-import useOnWheelZoomViewInterval from './useOnWheelZoomViewInterval';
+import useOnMouseDownPan from './useOnMouseDownPan';
+import useOnWheelZoom from './useOnWheelZoom';
 import useFocusConditionedWheel from './useFocusConditionedWheel';
 
 import classNames from 'classnames/bind';
@@ -132,8 +132,8 @@ const TimeAxisConnect = ({
 }) => {
   const containerRef = React.useRef(null);
   const entireScheduleWidth = useEntireScheduleWidth();
-  const onMouseDown = useOnMouseDownPanViewInterval(containerRef);
-  const onWheel = useOnWheelZoomViewInterval(containerRef);
+  const onMouseDown = useOnMouseDownPan(containerRef);
+  const onWheel = useOnWheelZoom(containerRef);
   const [
     onFocusConditionedWheel,
     tabIndex,

@@ -12,8 +12,8 @@ import {
   useScheduleX,
 } from './store/lengthTime';
 
-import useOnMouseDownPanViewInterval from './useOnMouseDownPanViewInterval';
-import useOnWheelZoomViewInterval from './useOnWheelZoomViewInterval';
+import useOnMouseDownPan from './useOnMouseDownPan';
+import useOnWheelZoom from './useOnWheelZoom';
 import useFocusConditionedWheel from './useFocusConditionedWheel';
 
 import classNames from 'classnames/bind';
@@ -89,8 +89,8 @@ const ScheduleContainerConnect = ({
   const groupIdsMemo = useMemoArray(groupIds);
   const posX = useScheduleX();
 
-  const onMouseDown = useOnMouseDownPanViewInterval(containerRef);
-  const onWheel = useOnWheelZoomViewInterval(containerRef);
+  const onMouseDown = useOnMouseDownPan(containerRef);
+  const onWheel = useOnWheelZoom(containerRef);
 
   const [
     onFocusConditionedWheel,

@@ -15,7 +15,7 @@ import {
 import { differenceInMilliseconds, addMilliseconds, subMilliseconds, isBefore, isAfter } from 'date-fns/fp';
 import useHandlerCallback from './useHandlerCallback';
 
-const useOnWheelZoomViewInterval = containerRef => {
+const useOnWheelZoom = containerRef => {
   const dispatch = useContext(TimeLineDispatchContext);
   const width = useScheduleWidth();
   const viewStartTime = useViewStartTime();
@@ -91,4 +91,4 @@ const useOnWheelZoomViewInterval = containerRef => {
   return onWheel;
 };
 
-export default useOnWheelZoomViewInterval;
+export default useOnWheelZoom;

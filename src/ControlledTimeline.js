@@ -13,7 +13,7 @@ const cx = classNames.bind(timelineStyles);
 // grid, tracker
 // sets displayTime
 // sets TrackerTime
-const ControlledTimeContainer = React.memo(({
+const ControlledTimeline = React.memo(({
   itemComponent,
   groupComponent,
   children
@@ -29,4 +29,4 @@ const ControlledTimeContainer = React.memo(({
   );
 });
 
-export default ControlledTimeContainer;
+export default ControlledTimeline;

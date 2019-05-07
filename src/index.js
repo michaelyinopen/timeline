@@ -1,9 +1,5 @@
-import React, { Component } from 'react';
-
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
-}
+export { default as Timeline } from './Timeline';
+export { default as GroupAxis } from './GroupAxis';
+export { default as TimelineContent } from './TimelineContent';
+export { default as ScheduleContainer } from './ScheduleContainer';
+export { default as TimeAxis } from './TimeAxis';

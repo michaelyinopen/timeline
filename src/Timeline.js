@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import ControlledTimeContainer from './ControlledTimeContainer';
+import ControlledTimeline from './ControlledTimeline';
 import reducer, {
   init,
   timelineStateSelector,
@@ -15,7 +15,7 @@ import TimelineItemsStateContext from './TimelineItemsStateContext';
 // grid, tracker
 // sets displayTime
 // sets TrackerTime
-const TimeContainer = ({
+const Timeline = ({
   // need to add an option: "date"/"distance"
   timeOptions,
   groups,
@@ -38,12 +38,12 @@ const TimeContainer = ({
       <TimelineStateContext.Provider value={timelineState}>
         <TimelineGroupsStateContext.Provider value={timelineGroups}>
           <TimelineItemsStateContext.Provider value={timelineItems}>
-            <ControlledTimeContainer
+            <ControlledTimeline
               itemComponent={itemComponent}
               groupComponent={groupComponent}
             >
               {children}
-            </ControlledTimeContainer>
+            </ControlledTimeline>
           </TimelineItemsStateContext.Provider>
         </TimelineGroupsStateContext.Provider>
       </TimelineStateContext.Provider>
@@ -51,4 +51,4 @@ const TimeContainer = ({
   );
 };
 
-export default TimeContainer;
+export default Timeline;

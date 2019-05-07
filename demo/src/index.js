@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 
-import Example from '../../src';
-import TimeContainer from '../../src/TimeContainer';
-import TimelineContent from '../../src/TimelineContent';
-import GroupAxis from '../../src/GroupAxis';
-import ScheduleContainer from '../../src/ScheduleContainer';
-import TimeAxis from '../../src/TimeAxis';
+
+import {
+  Timeline,
+  GroupAxis,
+  TimelineContent,
+  ScheduleContainer,
+  TimeAxis
+} from '../../src';
 
 const timeOptions = {
   minTime: new Date(2019, 0, 1),
@@ -41,7 +43,7 @@ const TimelineDemo = () => {
   return (
     <div>
       <h1>@michaelyin/timeline Demo</h1>
-      <TimeContainer
+      <Timeline
         timeOptions={timeOptions}
         groups={groups}
         items={items}
@@ -51,7 +53,7 @@ const TimelineDemo = () => {
           <ScheduleContainer focusToZoom />
         </TimelineContent>
         <TimeAxis />
-      </TimeContainer>
+      </Timeline>
     </div>
   );
 }
