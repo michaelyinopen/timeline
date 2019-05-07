@@ -1,5 +1,5 @@
 {
-  "name": "@michaelyinopen/timeline",
+  "name": "@michaelyin/timeline",
   "version": "1.0.0",
   "description": "A React component that shows some events' time and duration on a time scale",
   "private": true,
@@ -21,13 +21,30 @@
     "coverage": "jest --coverage",
     "coverage:watch": "jest --coverage --watch"
   },
-  "dependencies": {},
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "date-fns": "2.0.0-alpha.27",
+    "lodash": "^4.17.11",
+    "memoize-one": "^5.0.4",
+    "react-dnd": "^7.4.5",
+    "react-dnd-html5-backend": "^7.4.4",
+    "react-resize-detector": "^4.1.3",
+    "reduce-reducers": "^1.0.4",
+    "redux": "^4.0.1",
+    "redux-undo": "^0.6.1"
+  },
   "peerDependencies": {
+    "@babel/core": "^7.2.0",
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
     "react": "^16.8.6"
   },
   "devDependencies": {
+    "@babel/core": "7.2.0",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "nwb": "0.23.x",
