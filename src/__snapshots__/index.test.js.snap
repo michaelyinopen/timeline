@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Matches snapshot 1`] = `
+exports[`Controlled Timeline Matches snapshot 1`] = `
 <div
   className="timeline__time-container"
 >

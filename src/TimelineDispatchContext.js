@@ -1,5 +1,5 @@
 import React from 'react';
 
-const TimeLineDispatchContext = React.createContext(null);
+const TimelineDispatchContext = React.createContext(null);
 
-export default TimeLineDispatchContext;
+export default TimelineDispatchContext;

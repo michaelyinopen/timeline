@@ -1,7 +1,7 @@
 import React from 'react';
 import { useItem } from './store/useSelector';
 import classNames from 'classnames/bind';
-import timelineStyles from './Timeline.module.css';
+import timelineStyles from '../css/Timeline.module.css';
 
 const cx = classNames.bind(timelineStyles);
 

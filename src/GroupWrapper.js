@@ -9,7 +9,7 @@ import { useGroupItemsHeight } from './store/groupItemHeight';
 import ItemWrapper from './ItemWrapper';
 import useMemoArray from './functions/useMemoArray';
 import classNames from 'classnames/bind';
-import timelineStyles from './Timeline.module.css';
+import timelineStyles from '../css/Timeline.module.css';
 
 const cx = classNames.bind(timelineStyles);
 

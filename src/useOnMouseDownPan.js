@@ -2,7 +2,7 @@
 import { useState, useCallback, useContext, useEffect } from 'react';
 import { throttle } from 'lodash';
 import { timelineThrottleWait } from './constants';
-import TimeLineDispatchContext from './TimelineDispatchContext';
+import TimelineDispatchContext from './TimelineDispatchContext';
 import { changeViewInterval } from './store/actionCreators';
 import {
   useViewStartTime,
@@ -33,7 +33,7 @@ const calculateNewViewInterval = (
 };
 
 const useOnMouseDownPan = containerRef => {
-  const dispatch = useContext(TimeLineDispatchContext);
+  const dispatch = useContext(TimelineDispatchContext);
   const width = useScheduleWidth();
   const viewStartTime = useViewStartTime();
   const viewEndTime = useViewEndTime();

@@ -2,7 +2,7 @@ import { useEffect, useContext, useCallback } from 'react';
 import { throttle } from 'lodash';
 import { zoomfactor, timelineThrottleWait } from './constants';
 import { changeViewInterval } from './store/actionCreators';
-import TimeLineDispatchContext from './TimelineDispatchContext';
+import TimelineDispatchContext from './TimelineDispatchContext';
 import {
   useViewStartTime,
   useViewEndTime,
@@ -16,7 +16,7 @@ import { differenceInMilliseconds, addMilliseconds, subMilliseconds, isBefore, i
 import useHandlerCallback from './useHandlerCallback';
 
 const useOnWheelZoom = containerRef => {
-  const dispatch = useContext(TimeLineDispatchContext);
+  const dispatch = useContext(TimelineDispatchContext);
   const width = useScheduleWidth();
   const viewStartTime = useViewStartTime();
   const viewEndTime = useViewEndTime();

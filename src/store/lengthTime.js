@@ -42,27 +42,27 @@ export const useScheduleX = () => {
 };
 
 //#region conversions
-export const useMillisecondsToLengthFunc = () => {
+export const useDurationToLengthFunc = () => {
   const viewStart = useViewStartTime();
   const viewEnd = useViewEndTime();
   const scheduleWidth = useScheduleWidth();
   const duration = differenceInMilliseconds(viewStart)(viewEnd);
-  const millisecondsToLengthFunc = useMemo(
+  const durationToLengthFunc = useMemo(
     () => milliseconds => {
       const length = milliseconds / duration * scheduleWidth;
       return length;
     },
     [duration, scheduleWidth]
   );
-  return millisecondsToLengthFunc;
+  return durationToLengthFunc;
 };
 
-export const useScheduleElementTimeFunc = () => {
+export const useLeftToTimeFunc = () => {
   const minTime = useMinTime();
   const maxTime = useMaxTime();
   const entireScheduleWidth = useEntireScheduleWidth();
 
-  const scheduleElementTimeFunc = useMemo(
+  const leftToTimeFunc = useMemo(
     () => elementLeftX => {
       const getMillisecondsFromMinTime = differenceInMilliseconds(minTime);
       const entireDuration = getMillisecondsFromMinTime(maxTime);
@@ -77,7 +77,7 @@ export const useScheduleElementTimeFunc = () => {
     },
     [minTime, maxTime, entireScheduleWidth]
   )
-  return scheduleElementTimeFunc;
+  return leftToTimeFunc;
 };
 
 export const useScheduleElementXFunc = () => {
