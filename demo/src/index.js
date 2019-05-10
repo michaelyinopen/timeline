@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import UncontrolledExample from './UncontrolledExample';
 import ControlledExample from './ControlledExample';
+import '../css/index.css';
 
 const TimelineDemo = () => {
   return (

@@ -33,13 +33,13 @@ const venuesData = [
 
 const eventsData = [
   { "id": 1, "name": "Training", "venueId": 1, "start": new Date(2019, 0, 1, 0, 0), "end": new Date(2019, 0, 1, 0, 10) },
-  { "id": 2, "name": "QA inspect", "venueId": 2, "start": new Date(2019, 0, 1, 0, 0), "end": new Date(2019, 0, 1, 0, 8) },
-  { "id": 3, "name": "QA inspect", "venueId": 1, "start": new Date(2019, 0, 1, 0, 10), "end": new Date(2019, 0, 1, 0, 13) },
+  { "id": 2, "name": "Inspect", "venueId": 2, "start": new Date(2019, 0, 1, 0, 0), "end": new Date(2019, 0, 1, 0, 8) },
+  { "id": 3, "name": "Inspect", "venueId": 1, "start": new Date(2019, 0, 1, 0, 10), "end": new Date(2019, 0, 1, 0, 13) },
   { "id": 4, "name": "Training", "venueId": 2, "start": new Date(2019, 0, 1, 0, 10), "end": new Date(2019, 0, 1, 0, 18) },
   { "id": 5, "name": "Boss visit", "venueId": 1, "start": new Date(2019, 0, 1, 0, 13), "end": new Date(2019, 0, 1, 0, 17) },
-  { "id": 6, "name": "QA inspect", "venueId": 4, "start": new Date(2019, 0, 1, 0, 13), "end": new Date(2019, 0, 1, 0, 18) },
+  { "id": 6, "name": "Inspect", "venueId": 4, "start": new Date(2019, 0, 1, 0, 13), "end": new Date(2019, 0, 1, 0, 18) },
   { "id": 7, "name": "Boss visit", "venueId": 2, "start": new Date(2019, 0, 1, 0, 18), "end": new Date(2019, 0, 1, 0, 25) },
-  { "id": 8, "name": "QA inspect", "venueId": 3, "start": new Date(2019, 0, 1, 0, 18), "end": new Date(2019, 0, 1, 0, 24) },
+  { "id": 8, "name": "Inspect", "venueId": 3, "start": new Date(2019, 0, 1, 0, 18), "end": new Date(2019, 0, 1, 0, 24) },
   { "id": 9, "name": "Training", "venueId": 3, "start": new Date(2019, 0, 1, 0, 24), "end": new Date(2019, 0, 1, 0, 28) },
   { "id": 10, "name": "Boss visit", "venueId": 4, "start": new Date(2019, 0, 1, 0, 25), "end": new Date(2019, 0, 1, 0, 28) },
 ];
