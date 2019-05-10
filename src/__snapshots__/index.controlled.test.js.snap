@@ -28,9 +28,9 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
             onMouseOver={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            title="Machine 1"
+            title="1, Inductrial Centre, Industry Street"
           >
-            M1
+            Factory
           </div>
         </div>
       </li>
@@ -52,9 +52,9 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
             onMouseOver={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            title="Machine 2"
+            title="Shop 1A, Big Shopping Mall, 1 Beautiful Avenue"
           >
-            M2
+            Main Branch
           </div>
         </div>
       </li>
@@ -76,9 +76,9 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
             onMouseOver={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            title="Machine 3"
+            title="20/F, Tall Buiding, City Central"
           >
-            M3
+            Office
           </div>
         </div>
       </li>
@@ -100,9 +100,9 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
             onMouseOver={[Function]}
             onTouchEnd={[Function]}
             onTouchStart={[Function]}
-            title="Machine 4"
+            title="No. 37, Side Road"
           >
-            M4
+            Outlet
           </div>
         </div>
       </li>
@@ -113,7 +113,7 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
-    tabIndex={0}
+    onWheel={[Function]}
   >
     <div />
     <div
@@ -158,10 +158,19 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
                   >
                     <div />
                     <div
-                      className="timeline__item-content"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "background": "linear-gradient(to bottom right, transparent 10%, lightblue 15%, lightblue 85%, transparent 90%)",
+                          "display": "flex",
+                          "justifyContent": "center",
+                          "marginBottom": "4px",
+                          "paddingBottom": "5px",
+                          "paddingTop": "5px",
+                        }
+                      }
                     >
-                      Item: 
-                      J1
+                      Training
                     </div>
                   </div>
                 </li>
@@ -178,10 +187,19 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
                   >
                     <div />
                     <div
-                      className="timeline__item-content"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "background": "linear-gradient(to bottom right, transparent 10%, lightblue 15%, lightblue 85%, transparent 90%)",
+                          "display": "flex",
+                          "justifyContent": "center",
+                          "marginBottom": "4px",
+                          "paddingBottom": "5px",
+                          "paddingTop": "5px",
+                        }
+                      }
                     >
-                      Item: 
-                      J2
+                      QA inspect
                     </div>
                   </div>
                 </li>
@@ -198,90 +216,19 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
                   >
                     <div />
                     <div
-                      className="timeline__item-content"
-                    >
-                      Item: 
-                      J3
-                    </div>
-                  </div>
-                </li>
-              </ol>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div
-            className="timeline__group-wrapper"
-          >
-            <div />
-            <div
-              className="timeline__group-content"
-            >
-              <ol
-                className="timeline__items timeline__list--none-style"
-                style={
-                  Object {
-                    "height": 28,
-                  }
-                }
-              >
-                <li>
-                  <div
-                    className="timeline__item-wrapper"
-                    onMouseDown={[Function]}
-                    style={
-                      Object {
-                        "transform": "translate(0px, 0px)",
-                        "width": "0px",
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "background": "linear-gradient(to bottom right, transparent 10%, lightblue 15%, lightblue 85%, transparent 90%)",
+                          "display": "flex",
+                          "justifyContent": "center",
+                          "marginBottom": "4px",
+                          "paddingBottom": "5px",
+                          "paddingTop": "5px",
+                        }
                       }
-                    }
-                  >
-                    <div />
-                    <div
-                      className="timeline__item-content"
                     >
-                      Item: 
-                      J2
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    className="timeline__item-wrapper"
-                    onMouseDown={[Function]}
-                    style={
-                      Object {
-                        "transform": "translate(0px, 0px)",
-                        "width": "0px",
-                      }
-                    }
-                  >
-                    <div />
-                    <div
-                      className="timeline__item-content"
-                    >
-                      Item: 
-                      J1
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div
-                    className="timeline__item-wrapper"
-                    onMouseDown={[Function]}
-                    style={
-                      Object {
-                        "transform": "translate(0px, 0px)",
-                        "width": "0px",
-                      }
-                    }
-                  >
-                    <div />
-                    <div
-                      className="timeline__item-content"
-                    >
-                      Item: 
-                      J3
+                      Boss visit
                     </div>
                   </div>
                 </li>
@@ -318,10 +265,19 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
                   >
                     <div />
                     <div
-                      className="timeline__item-content"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "background": "linear-gradient(to bottom right, transparent 10%, lightblue 15%, lightblue 85%, transparent 90%)",
+                          "display": "flex",
+                          "justifyContent": "center",
+                          "marginBottom": "4px",
+                          "paddingBottom": "5px",
+                          "paddingTop": "5px",
+                        }
+                      }
                     >
-                      Item: 
-                      J2
+                      QA inspect
                     </div>
                   </div>
                 </li>
@@ -338,10 +294,48 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
                   >
                     <div />
                     <div
-                      className="timeline__item-content"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "background": "linear-gradient(to bottom right, transparent 10%, lightblue 15%, lightblue 85%, transparent 90%)",
+                          "display": "flex",
+                          "justifyContent": "center",
+                          "marginBottom": "4px",
+                          "paddingBottom": "5px",
+                          "paddingTop": "5px",
+                        }
+                      }
                     >
-                      Item: 
-                      J1
+                      Training
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="timeline__item-wrapper"
+                    onMouseDown={[Function]}
+                    style={
+                      Object {
+                        "transform": "translate(0px, 0px)",
+                        "width": "0px",
+                      }
+                    }
+                  >
+                    <div />
+                    <div
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "background": "linear-gradient(to bottom right, transparent 10%, lightblue 15%, lightblue 85%, transparent 90%)",
+                          "display": "flex",
+                          "justifyContent": "center",
+                          "marginBottom": "4px",
+                          "paddingBottom": "5px",
+                          "paddingTop": "5px",
+                        }
+                      }
+                    >
+                      Boss visit
                     </div>
                   </div>
                 </li>
@@ -378,10 +372,19 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
                   >
                     <div />
                     <div
-                      className="timeline__item-content"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "background": "linear-gradient(to bottom right, transparent 10%, lightblue 15%, lightblue 85%, transparent 90%)",
+                          "display": "flex",
+                          "justifyContent": "center",
+                          "marginBottom": "4px",
+                          "paddingBottom": "5px",
+                          "paddingTop": "5px",
+                        }
+                      }
                     >
-                      Item: 
-                      J2
+                      QA inspect
                     </div>
                   </div>
                 </li>
@@ -398,10 +401,97 @@ exports[`Controlled Timeline Matches snapshot 1`] = `
                   >
                     <div />
                     <div
-                      className="timeline__item-content"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "background": "linear-gradient(to bottom right, transparent 10%, lightblue 15%, lightblue 85%, transparent 90%)",
+                          "display": "flex",
+                          "justifyContent": "center",
+                          "marginBottom": "4px",
+                          "paddingBottom": "5px",
+                          "paddingTop": "5px",
+                        }
+                      }
                     >
-                      Item: 
-                      J3
+                      Training
+                    </div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div
+            className="timeline__group-wrapper"
+          >
+            <div />
+            <div
+              className="timeline__group-content"
+            >
+              <ol
+                className="timeline__items timeline__list--none-style"
+                style={
+                  Object {
+                    "height": 28,
+                  }
+                }
+              >
+                <li>
+                  <div
+                    className="timeline__item-wrapper"
+                    onMouseDown={[Function]}
+                    style={
+                      Object {
+                        "transform": "translate(0px, 0px)",
+                        "width": "0px",
+                      }
+                    }
+                  >
+                    <div />
+                    <div
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "background": "linear-gradient(to bottom right, transparent 10%, lightblue 15%, lightblue 85%, transparent 90%)",
+                          "display": "flex",
+                          "justifyContent": "center",
+                          "marginBottom": "4px",
+                          "paddingBottom": "5px",
+                          "paddingTop": "5px",
+                        }
+                      }
+                    >
+                      QA inspect
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="timeline__item-wrapper"
+                    onMouseDown={[Function]}
+                    style={
+                      Object {
+                        "transform": "translate(0px, 0px)",
+                        "width": "0px",
+                      }
+                    }
+                  >
+                    <div />
+                    <div
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "background": "linear-gradient(to bottom right, transparent 10%, lightblue 15%, lightblue 85%, transparent 90%)",
+                          "display": "flex",
+                          "justifyContent": "center",
+                          "marginBottom": "4px",
+                          "paddingBottom": "5px",
+                          "paddingTop": "5px",
+                        }
+                      }
+                    >
+                      Boss visit
                     </div>
                   </div>
                 </li>

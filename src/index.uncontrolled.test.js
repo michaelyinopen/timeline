@@ -1,4 +1,5 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import {
   Timeline,
   GroupAxis,
@@ -6,9 +7,8 @@ import {
   ScheduleContainer,
   TimeAxis
 } from './index';
-import renderer from 'react-test-renderer';
 
-describe("Controlled Timeline", () => {
+describe("Uncontrolled Timeline", () => {
   const timeOptions = {
     minTime: new Date(2019, 0, 1),
     maxTime: new Date(2019, 0, 1, 1),
@@ -38,8 +38,8 @@ describe("Controlled Timeline", () => {
     { "id": 10, "title": "J3", "groupId": 4, "start": new Date(2019, 0, 1, 0, 25), "procedureId": 10, "end": new Date(2019, 0, 1, 0, 28) },
   ];
 
-  test('Can render demo timeline', () => {
-    const component = renderer.create(
+  const UncontrolledExample = () => {
+    return (
       <Timeline
         timeOptions={timeOptions}
         groups={groups}
@@ -52,22 +52,17 @@ describe("Controlled Timeline", () => {
         <TimeAxis />
       </Timeline>
     );
-  });
+  };
 
+  test('Can render demo timeline', () => {
+    const component = renderer.create(
+      <UncontrolledExample />
+    );
+  });
 
   test('Matches snapshot', () => {
     const component = renderer.create(
-      <Timeline
-        timeOptions={timeOptions}
-        groups={groups}
-        items={items}
-      >
-        <TimelineContent>
-          <GroupAxis />
-          <ScheduleContainer focusToZoom />
-        </TimelineContent>
-        <TimeAxis />
-      </Timeline>
+      <UncontrolledExample />
     );
 
     let tree = component.toJSON();

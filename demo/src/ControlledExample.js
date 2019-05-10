@@ -161,7 +161,6 @@ const EventsOnTimeline = ({
   );
 };
 
-
 const ControlledExample = () => {
   return (
     <article>
