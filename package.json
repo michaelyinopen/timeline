@@ -1,6 +1,6 @@
 {
   "name": "@michaelyin/timeline",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React component that shows some events' time and duration on a time scale",
   "private": true,
   "main": "lib/index.js",
