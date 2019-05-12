@@ -57,20 +57,19 @@ const useOnMouseDownPan = containerRef => {
     }
   });
 
-  const onMouseMove = useCallback(
+  const onMouseMoveThrottled = useCallback(
     throttle(
-      e => {
-        onMouseMoveHandlerCallback(e.pageX)
-      },
+      pageX => onMouseMoveHandlerCallback(pageX),
       timelineThrottleWait,
       { leading: true, trailing: true }
     ),
     [onMouseMoveHandlerCallback]
   );
 
-  useEffect(() => {
-    return () => onMouseMove.cancel();
-  }, []);
+  const onMouseMove = useCallback(
+    e => onMouseMoveThrottled(e.pageX),
+    [onMouseMoveThrottled]
+  );
 
   const onMouseUp = useCallback(
     () => {
@@ -98,13 +97,13 @@ const useOnMouseDownPan = containerRef => {
     },
     [onMouseDownHandlerCallback]
   );
+  
   useEffect(() => {
     return () => {
       if (containerRef.current) {
         containerRef.current.style.cursor = "auto";
       }
-      if (onMouseMove.cancel) { onMouseMove.cancel(); }
-      if (onMouseUp.cancel) { onMouseUp.cancel(); }
+      if (onMouseMoveThrottled.cancel) { onMouseMoveThrottled.cancel(); }
       document.removeEventListener("mousemove", onMouseMove);
       document.removeEventListener("mouseup", onMouseUp);
     };

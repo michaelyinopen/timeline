@@ -52,7 +52,6 @@ const ScheduleContainer = ({
   onFocusClick,
   onFocus,
   onBlur,
-  onFocusConditionedWheel,
   onResize,
   children,
 }) => {
@@ -63,7 +62,6 @@ const ScheduleContainer = ({
       onClick={onFocusClick}
       onFocus={onFocus}
       onBlur={onBlur}
-      onWheel={onFocusConditionedWheel}
       className={cx({ "timeline__slide-container": true, "timeline__schedule-container": true })}
     >
       <ReactResizeDetector
@@ -93,7 +91,6 @@ const ScheduleContainerConnect = ({
   const onWheel = useOnWheelZoom(containerRef);
 
   const [
-    onFocusConditionedWheel,
     tabIndex,
     onFocusClick,
     onFocus,
@@ -133,7 +130,6 @@ const ScheduleContainerConnect = ({
       onFocusClick={onFocusClick}
       onFocus={onFocus}
       onBlur={onBlur}
-      onFocusConditionedWheel={onFocusConditionedWheel}
       onResize={onResize}
     >
       {scheduleSliceMemo}

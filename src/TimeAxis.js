@@ -96,7 +96,6 @@ const TimeAxis = ({
   onFocusClick,
   onFocus,
   onBlur,
-  onFocusConditionedWheel,
   posX,
 }) => {
   return (
@@ -106,7 +105,6 @@ const TimeAxis = ({
       onClick={onFocusClick}
       onFocus={onFocus}
       onBlur={onBlur}
-      onWheel={onFocusConditionedWheel}
       className={cx({
         "timeline__time-axis": true,
         "timeline__slide-container": true
@@ -135,7 +133,6 @@ const TimeAxisConnect = ({
   const onMouseDown = useOnMouseDownPan(containerRef);
   const onWheel = useOnWheelZoom(containerRef);
   const [
-    onFocusConditionedWheel,
     tabIndex,
     onFocusClick,
     onFocus,
@@ -209,7 +206,6 @@ const TimeAxisConnect = ({
       onFocusClick={onFocusClick}
       onFocus={onFocus}
       onBlur={onBlur}
-      onFocusConditionedWheel={onFocusConditionedWheel}
       posX={posX}
     />
   );

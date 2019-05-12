@@ -414,10 +414,6 @@ exports[`Uncontrolled Timeline Matches snapshot 1`] = `
   </div>
   <div
     className="timeline__time-axis timeline__slide-container"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onWheel={[Function]}
   >
     <div
       className="timeline__time-axis-slide"

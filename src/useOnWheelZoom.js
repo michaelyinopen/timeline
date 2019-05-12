@@ -63,30 +63,35 @@ const useOnWheelZoom = containerRef => {
   // also event properties are selected can cached
   // throttle the scroll because do not want smooth wheels to scroll uncontrollably fast
   // throttle: pre-mature solving a maybe-non-existing problem
-  const onWheel = useCallback(
+  const onWheelthrottled = useCallback(
     throttle(
-      e => {
-        let delta =
-          e.deltaY ||
-          e.delta ||
-          (e.originalEvent && e.originalEvent.wheelDelta) ||
-          (e.originalEvent && -e.originalEvent.detail); // browser compatibility
-        const zoomSign = delta ? -Math.sign(delta) : 0;
-        onWheelHandlerCallback(zoomSign, e.pageX);
-        e.preventDefault();
-        e.stopPropagation();
-      },
+      (zoomSign, pageX) => onWheelHandlerCallback(zoomSign, pageX),
       timelineThrottleWait,
       { leading: true, trailing: true }
     ),
     [onWheelHandlerCallback]
   );
 
+  const onWheel = useCallback(
+    e => {
+      let delta =
+        e.deltaY ||
+        e.delta ||
+        (e.originalEvent && e.originalEvent.wheelDelta) ||
+        (e.originalEvent && -e.originalEvent.detail); // browser compatibility
+      const zoomSign = delta ? -Math.sign(delta) : 0;
+      onWheelthrottled(zoomSign, e.pageX);
+      e.preventDefault();
+      e.stopPropagation();
+    },
+    [onWheelthrottled]
+  );
+
   useEffect(() => {
     return () => {
-      onWheel.cancel();
+      if (onWheelthrottled.cancel) onWheelthrottled.cancel();
     }
-  }, [onWheel]);
+  }, [onWheelthrottled]);
 
   return onWheel;
 };
