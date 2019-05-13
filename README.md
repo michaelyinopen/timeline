@@ -8,6 +8,14 @@ A React component that shows some events' time and duration on a time scale.
 
 ![uncontrolled example](uncontrolled-example.png)
 
+## The Display
+
+* Displays items according to their start and end time.
+* Displays items in groups.
+* Items with overlapping intervals will display in a stack.
+* User can use mouse to pan along the timeline.
+* User can scroll in and out to change time scale.
+
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo
 
