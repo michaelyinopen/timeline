@@ -5,10 +5,8 @@
 [![Coveralls][coveralls-badge]][coveralls]
 
 A React component that shows some events' time and duration on a time scale.
-<img
-    src="uncontrolled-example.png"
-    alt="uncontrolled example" width="200"
-/>
+
+![uncontrolled example](uncontrolled-example.png)
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo
