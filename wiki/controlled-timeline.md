@@ -3,11 +3,11 @@ Other than providing a `Timeline` component as a self-contained component, this 
 
 `Timeline` component contains its own redux store and contexts, in contrast `ControlledTimeline` does not contain its own redux store and contexts. The benefits of having the store and contexts outside of the component:
 
-* Only one redux store.
-* More control over the structure of the state.
-* Can use reducer composition or reducer enhancers.
-* Other parts of an application can access timeline's state and dispatch timeline's actions.
-* See https://reactjs.org/docs/forms.html#controlled-components
+- Only one redux store.
+- More control over the structure of the state.
+- Can use reducer composition or reducer enhancers.
+- Other parts of an application can access timeline's state and dispatch timeline's actions.
+- See https://reactjs.org/docs/forms.html#controlled-components
 
 ## Example: Events in Venues
 1. Incorporate timeline's store into your store, it will not contain groups and items.
