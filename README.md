@@ -66,36 +66,35 @@ Use the timeline component and its children components as above.
 The timeline will be rendered with the groups and items.
 
 ### Timeline Props
-* `timeOptions`
-an object of
-```
-{
-  minTime,           // javascript Date
-  maxTime,           // javascript Date
-  viewStartTime,     // javascript Date
-  viewEndTime,       // javascript Date
-  minViewDuration,   // milliseconds
-  maxViewDuration,   // milliseconds
-}
-```
+* `timeOptions` an object of
+  ```
+  {
+    minTime,           // javascript Date
+    maxTime,           // javascript Date
+    viewStartTime,     // javascript Date
+    viewEndTime,       // javascript Date
+    minViewDuration,   // milliseconds
+    maxViewDuration,   // milliseconds
+  }
+  ```
 * `groups` an **array** of object of
-```
-{
-  id,            // unique identifier
-  title,         // displayed on the group axis on the left
-  description,   // tooltip of the group axis
-}
-```
+  ```
+  {
+    id,            // unique identifier
+    title,         // displayed on the group axis on the left
+    description,   // tooltip of the group axis
+  }
+  ```
 * `items` an **array** of object of
-```
-{
-  id,       // unique identifier
-  title,    // displayed on the item (optional if you set itemComponent prop)
-  groupId,  // id of group
-  start,    // javascript Date
-  end,      // javascript Date
-}
-```
+  ```
+  {
+    id,       // unique identifier
+    title,    // displayed on the item (optional if you set itemComponent prop)
+    groupId,  // id of group
+    start,    // javascript Date
+    end,      // javascript Date
+  }
+  ```
 * `itemComponent`(Optional) you can pass a custom react component to render the items. The component receives the item's `id` as prop.
 * `groupComponent`(Optional) you can pass a custom react component to render the group's area where items are placed. The component receives the group's `id` as prop. *This does not affect the group axis on the left.*
 
