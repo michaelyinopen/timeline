@@ -6,7 +6,7 @@
 
 A React component that shows some events' time and duration on a time scale.
 
-Visit the  [Live Demo](http://<Todo>.com).
+Visit the [Live Demo](http://<Todo>.com).
 
 ![uncontrolled example](images/uncontrolled-example.png)
 
