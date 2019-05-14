@@ -8,7 +8,7 @@ A React component that shows some events' time and duration on a time scale.
 
 Visit the  [Live Demo](http://<Todo>.com).
 
-![uncontrolled example](uncontrolled-example.png)
+![uncontrolled example](images/uncontrolled-example.png)
 
 ## The Display
 * Displays items according to their start and end time.
@@ -45,18 +45,22 @@ import {
   ScheduleContainer,
   TimeAxis
 } from '@michaelyin/timeline';
-
-<Timeline
-  timeOptions={timeOptions}
-  groups={groups}
-  items={items}
->
-  <TimelineContent>
-    <GroupAxis />
-    <ScheduleContainer focusToZoom />
-  </TimelineContent>
-  <TimeAxis />
-</Timeline>
+...
+const MyComponent = () => {
+  return (
+    <Timeline
+      timeOptions={timeOptions}
+      groups={groups}
+      items={items}
+    >
+      <TimelineContent>
+        <GroupAxis />
+        <ScheduleContainer focusToZoom />
+      </TimelineContent>
+      <TimeAxis />
+    </Timeline>
+  );
+}
 ```
 Use the timeline component and its children components as above.
 The timeline will be rendered with the groups and items.
@@ -95,6 +99,8 @@ an object of
 * `itemComponent`(Optional) you can pass a custom react component to render the items. The component receives the item's `id` as prop.
 * `groupComponent`(Optional) you can pass a custom react component to render the group's area where items are placed. The component receives the group's `id` as prop. *This does not affect the group axis on the left.*
 
+*Note: `timeOptions`, `groups` and `items` pass as props are used only to initialize the timeline. Updates to these props will not take effect, please refer to [Controlled Timeline](wiki/controlled-timeline.md) if you want to update these props.*
+
 *Note: other properties in `timeOptions`, `groups` and `items` objects are ignored.*
 
 ### ScheduleContainer Props
@@ -102,6 +108,10 @@ an object of
 
 ### TimeAxis Props
 * `focusToZoom` By default, when mouse is over the time-axis, scrolling will zoom the view time. Set `focusToZoom` to prevent scroll zoom, unless the time axis is selected. Use this if documet scrolling is interrupted by timeline.
+
+## Advanced Usage: Controlled Timeline
+Other than providing a `Timeline` component as a self-contained component, this library also provides a `ControlledTimeline` to facilitate integration with other parts of an application.
+See [Controlled Timeline](wiki/controlled-timeline.md)
 
 ## Contributing
 see  [CONTRIBUTING](CONTRIBUTING.md)
