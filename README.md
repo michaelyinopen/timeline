@@ -67,6 +67,7 @@ The timeline will be rendered with the groups and items.
 
 ### Timeline Props
 - `timeOptions` an object of
+
     ```js
     {
       minTime,           // javascript Date
@@ -78,6 +79,7 @@ The timeline will be rendered with the groups and items.
     }
     ```
 - `groups` an **array** of object of
+
     ```js
     {
       id,            // unique identifier
@@ -86,6 +88,7 @@ The timeline will be rendered with the groups and items.
     }
     ```
 - `items` an **array** of object of
+
     ```js
     {
       id,       // unique identifier
