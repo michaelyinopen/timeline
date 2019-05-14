@@ -67,8 +67,7 @@ The timeline will be rendered with the groups and items.
 
 ### Timeline Props
 - `timeOptions` an object of
-
-    ```js
+    ```javascript
     {
       minTime,           // javascript Date
       maxTime,           // javascript Date
@@ -79,8 +78,7 @@ The timeline will be rendered with the groups and items.
     }
     ```
 - `groups` an **array** of object of
-
-    ```js
+    ```javascript
     {
       id,            // unique identifier
       title,         // displayed on the group axis on the left
@@ -88,8 +86,7 @@ The timeline will be rendered with the groups and items.
     }
     ```
 - `items` an **array** of object of
-
-    ```js
+    ```javascript
     {
       id,       // unique identifier
       title,    // displayed on the item (optional if you set itemComponent prop)

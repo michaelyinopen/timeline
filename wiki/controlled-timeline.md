@@ -11,9 +11,8 @@ Other than providing a `Timeline` component as a self-contained component, this 
 
 ## Example: Events in Venues
 1. Incorporate timeline's store into your store, it will not contain groups and items.
-    ```
+    ```javascript
     // myCustomReducer.js
-
     import {
       initBareState,
       bareTimelineReducer,
@@ -24,12 +23,13 @@ Other than providing a `Timeline` component as a self-contained component, this 
     // define venues reducer
     ...
 
-    export const reducer = combineReducers({
+   const reducer = combineReducers({
       timelineState: bareTimelineReducer,
       events,
       venues,
     });
-    //#endregion reducer
+
+    export default reducer;
 
     export const init = ({
       timeOptions,
@@ -48,8 +48,9 @@ Other than providing a `Timeline` component as a self-contained component, this 
    * timelineGroups; and
    * timelineItems
 
-    Refer to [Timeline Props](../README.md#markdown-header-timeline-props) for the structures.
-    ```
+    Refer to [Timeline Props](../README.md#timeline-props) for the structures.
+    ```javascript
+    // selectors.js
     const timelineStateSelector = state => state.timelineState;
 
     const timelineItemsSelector = state => {
@@ -60,6 +61,70 @@ Other than providing a `Timeline` component as a self-contained component, this 
       return state.venues.map(v => ({ id: v.id, title: v.name, description: v.address }));
     };
     ```
+3. Use the reducer and wrap the ControlledTimeline in contexts
+    ```javascript
+    import React, { useReducer, useContext } from 'react';
+    import {
+      TimelineStateContext,
+      TimelineItemsStateContext,
+      TimelineGroupsStateContext,
+      TimelineDispatchContext,
+      ControlledTimeline,
+      GroupAxis,
+      TimelineContent,
+      ScheduleContainer,
+      TimeAxis
+    } from '@michaelyin/timeline';
+    import reducer, { init } 'myCustomReducer';
+    import {
+      timelineStateSelector,
+      timelineItemsSelector, timelineGroupsSelector
+    } from 'selectors';
+    import reducer, { init } 'myCustomReducer';
+    import CustomStateContext from 'CustomStateContext'; // for the 
+    import CustomEvent from 'CustomEvent'; // custom component to render an itementire state
 
-Use the timeline component and its children components as above.
-The timeline will be rendered with the groups and items.
+    const EventsOnTimeline = ({
+      timeOptions,
+      venues,
+      events,
+    }) => {
+      const [state, dispatch] = useReducer(
+        reducer,
+        {
+          timeOptions,
+          venues,
+          events,
+        },
+        init
+      );
+      const timelineState = timelineStateSelector(state);
+      const timelineGroups = timelineGroupsSelector(state);
+      const timelineItems = timelineItemsSelector(state);
+
+      return (
+        <CustomStateContext.Provider value={state}>
+          <TimelineDispatchContext.Provider value={dispatch}>
+            <TimelineStateContext.Provider value={timelineState}>
+              <TimelineGroupsStateContext.Provider value={timelineGroups}>
+                <TimelineItemsStateContext.Provider value={timelineItems}>
+                  <ControlledTimeline
+                    itemComponent={CustomEvent} // custom component
+                  >
+                    <TimelineContent>
+                      <GroupAxis />
+                      <ScheduleContainer />
+                    </TimelineContent>
+                    <TimeAxis />
+                  </ControlledTimeline>
+                </TimelineItemsStateContext.Provider>
+              </TimelineGroupsStateContext.Provider>
+            </TimelineStateContext.Provider>
+          </TimelineDispatchContext.Provider>
+        </CustomStateContext.Provider>
+      );
+    };
+    ```
+  Use the Contexts and ControlledTimeline component and its children components as above.
+
+  Now when the state of groups and items are updated, the selectors will return updated timeline items and the timeline will reflect the change.
