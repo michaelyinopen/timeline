@@ -96,9 +96,11 @@ The timeline will be rendered with the groups and items.
     }
     ```
 - `itemComponent`(Optional) you can pass a custom react component to render the items. The component receives the item's `id` as prop.
+See [Custom Render Item and Groups](wiki/custom-render-items-groups.md).
 - `groupComponent`(Optional) you can pass a custom react component to render the group's area where items are placed. The component receives the group's `id` as prop. *This does not affect the group axis on the left.*
+See [Custom Render Item and Groups](wiki/custom-render-items-groups.md).
 
-*Note: `timeOptions`, `groups` and `items` pass as props are used only to initialize the timeline. Updates to these props will not take effect, please refer to [Controlled Timeline](wiki/controlled-timeline.md) if you want to update these props.*
+*Note: `timeOptions`, `groups` and `items` props are used only to initialize the timeline. Updates to these props will not take effect, see [Controlled Timeline](wiki/controlled-timeline.md) if you want to update these props.*
 
 *Note: other properties in `timeOptions`, `groups` and `items` objects are ignored.*
 
@@ -109,8 +111,12 @@ The timeline will be rendered with the groups and items.
 - `focusToZoom` By default, when mouse is over the time-axis, scrolling will zoom the view time. Set `focusToZoom` to prevent scroll zoom, unless the time axis is selected. Use this if documet scrolling is interrupted by timeline.
 
 ## Advanced Usage: Controlled Timeline
-Other than providing a `Timeline` component as a self-contained component, this library also provides a `ControlledTimeline` to facilitate integration with other parts of an application.
+Other than providing a self-contained `Timeline` component, this library also provides a `ControlledTimeline` to facilitate integration with other parts of an application.
 See [Controlled Timeline](wiki/controlled-timeline.md)
+
+## Advanced Usage: Custom render of items and groups
+The render of items and groups can be changed by setting `itemComponent` and/or `groupComponent` props on Timeline.
+See [Custom Render Item and Groups](wiki/custom-render-items-groups.md).
 
 ## Contributing
 see  [CONTRIBUTING](CONTRIBUTING.md)

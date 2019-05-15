@@ -1,5 +1,5 @@
 # Controlled Timeline
-Other than providing a `Timeline` component as a self-contained component, this library also provides a `ControlledTimeline` to facilitate integration with other parts of an application.
+Other than providing a self-contained `Timeline` component, this library also provides a `ControlledTimeline` to facilitate integration with other parts of an application.
 
 `Timeline` component contains its own redux store and contexts, in contrast `ControlledTimeline` does not contain its own redux store and contexts. The benefits of having the store and contexts outside of the component:
 
@@ -10,6 +10,7 @@ Other than providing a `Timeline` component as a self-contained component, this 
 - See https://reactjs.org/docs/forms.html#controlled-components
 
 ## Example: Events in Venues
+![Controlled example](../images/controlled-example.png)
 1. Incorporate timeline's store into your store, it will not contain groups and items.
     ```javascript
     // myCustomReducer.js
@@ -81,8 +82,9 @@ Other than providing a `Timeline` component as a self-contained component, this 
       timelineItemsSelector, timelineGroupsSelector
     } from 'selectors';
     import reducer, { init } 'myCustomReducer';
-    import CustomStateContext from 'CustomStateContext'; // for the 
-    import CustomEvent from 'CustomEvent'; // custom component to render an itementire state
+    import CustomStateContext from 'CustomStateContext'; // for the entire state
+    import CustomEvent from 'CustomEvent'; // custom component to render an item
+    // CustomEvent gets the information of an event from the id passed in and useContext(CustomStateContext)
 
     const EventsOnTimeline = ({
       timeOptions,
@@ -125,6 +127,6 @@ Other than providing a `Timeline` component as a self-contained component, this 
       );
     };
     ```
-  Use the Contexts and ControlledTimeline component and its children components as above.
+    Use the reducer, contexts, `ControlledTimeline` and its children components as above.
 
-  Now when the state of groups and items are updated, the selectors will return updated timeline items and the timeline will reflect the change.
+Now when the state of groups and items are updated, the selectors will return updated timeline items and the timeline will reflect the change.
