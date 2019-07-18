@@ -6,7 +6,7 @@
 
 A React component that shows some events' time and duration on a time scale.
 
-Visit the [Live Demo](http://<Todo>.com).
+Visit the <del>[Live Demo](http://<Todo>.com)</del>.
 
 ![uncontrolled example](images/uncontrolled-example.png)
 
@@ -18,22 +18,27 @@ Visit the [Live Demo](http://<Todo>.com).
 - User can scroll in and out to change time scale.
 
 ## Demos
-### Live Demo: [Live Demo](http://<Todo>.com)
-### Todo Code Sandbox: [Code Sandbox](http://<Todo>.com)
+### <del>Live Demo: [Live Demo](http://<Todo>.com)</del>
 ### Local Demo
 ```
-git clone https://<todo>.git
-cd <todo>
+git clone https://github.com/michaelyinopen/timeline.git
+cd timeline
 npm install && npm start
 // or
 yarn install && yarn start
 ```
-
+## Create tgz (this project is not on npm)
+```
+npm pack
+// OR
+yarn pack
+```
+Creates a michaelyin-timeline-1.0.1.tgz
 ## Installation
 ```
-npm i michaelyin-timeline-v1.0.1.tgz
+npm i michaelyin-timeline-1.0.1.tgz
 // OR
-yarn add michaelyin-timeline-v1.0.1.tgz
+yarn add michaelyin-timeline-1.0.1.tgz
 ```
 
 ## Usage
