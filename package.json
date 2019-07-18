@@ -19,7 +19,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "coverage": "jest --coverage",
-    "coverage:watch": "jest --coverage --watch"
+    "coverage:watch": "jest --coverage --watch",
+    "ghpage": "nwb build-demo && gh-pages -d demo/dist"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -42,6 +43,7 @@
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
     "babel-jest": "^24.8.0",
+    "gh-pages": "^2.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "nwb": "0.23.x",
