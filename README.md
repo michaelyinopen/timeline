@@ -6,7 +6,7 @@
 
 A React component that shows some events' time and duration on a time scale.
 
-Visit the <del>[Live Demo](http://<Todo>.com)</del>.
+Visit the [Live Demo](https://michaelyinopen.github.io/timeline).
 
 ![uncontrolled example](images/uncontrolled-example.png)
 
@@ -18,7 +18,7 @@ Visit the <del>[Live Demo](http://<Todo>.com)</del>.
 - User can scroll in and out to change time scale.
 
 ## Demos
-### <del>Live Demo: [Live Demo](http://<Todo>.com)</del>
+### Live Demo: [Live Demo](https://michaelyinopen.github.io/timeline)
 ### Local Demo
 ```
 git clone https://github.com/michaelyinopen/timeline.git
