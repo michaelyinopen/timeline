@@ -21,11 +21,16 @@ Visit the [Live Demo](https://michaelyinopen.github.io/timeline).
 ### Live Demo: [Live Demo](https://michaelyinopen.github.io/timeline)
 ### Local Demo
 ```
+npm install -g nwb@0.23.x
+```
+```
 git clone https://github.com/michaelyinopen/timeline.git
 cd timeline
-npm install && npm start
+npm install
+npm start
 // or
-yarn install && yarn start
+yarn install
+yarn start
 ```
 ## Create tgz (this project is not on npm)
 ```
