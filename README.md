@@ -34,8 +34,10 @@ yarn start
 ```
 ## Create tgz (this project is not on npm)
 ```
+npm build
 npm pack
 // OR
+npm build
 yarn pack
 ```
 Creates a michaelyin-timeline-1.0.1.tgz
