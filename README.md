@@ -6,9 +6,13 @@
 
 A React component that shows some events' time and duration on a time scale.
 
+
 Visit the [Live Demo](https://michaelyinopen.github.io/timeline).
 
 ![uncontrolled example](images/uncontrolled-example.png)
+
+## Why archived?
+Archived this repository becasue the dependencies have not been updated. It is not advised to install these outdated dependencies and run the code locally. The live demo hosted in GitHub Pages still works and welcome to check it out!
 
 ## The Display
 - Displays items according to their start and end time.
